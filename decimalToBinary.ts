@@ -1,4 +1,4 @@
-function decimalToBinary(number: number): number {
+export function decimalToBinary(number: number): number {
   let tempResult: string = "";
   let result: string = "";
 
