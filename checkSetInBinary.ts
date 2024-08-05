@@ -1,31 +1,16 @@
-import { binaryToDecimal } from "./binaryToDecimal";
-import { decimalToBinary } from "./decimalToBinary";
+function checkSetInBinary(decimalNumber: number, i: number): boolean {
+  let result = false;
 
-function checkSetInBinary(decimalNumber: number): { index: number }[] {
-  const result = [];
+  const binaryNumFromDecimal = decimalNumber.toString(2);
 
-  const binNumFrDecString = decimalToBinary(decimalNumber).toString();
-  const binNumFrDecStringLength = binNumFrDecString.length;
-  console.log(binNumFrDecString)
-  let setChecker: number = 1;
+  const setCheckVar = 1 << (i - 1);
+  console.log(decimalNumber.toString(2), setCheckVar.toString(2));
 
-  for (let i = binNumFrDecStringLength; i > 0; i--) {
-    
-    const binaryNumberSelect: number = Number(
-      binNumFrDecString.slice(i - 1, binNumFrDecStringLength),
-    );
-    
-    const tempValue: number = binaryNumberSelect & setChecker;
-    console.log(binaryNumberSelect, Number(setChecker.toString(2)), tempValue.toString(2));
-      
-    if (tempValue > 0) {
-      result.push({ index: i - 1 });
-    }
-
-    setChecker = setChecker << 1;
+  if (decimalNumber & setCheckVar) {
+    result = true;
   }
 
   return result;
 }
 
-console.log(checkSetInBinary(235));
+console.log(checkSetInBinary(245, 3));
