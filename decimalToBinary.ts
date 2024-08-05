@@ -21,4 +21,4 @@ export function decimalToBinary(number: number): number {
   return Number(result)
 }
 
-console.log(decimalToBinary(55));
+// console.log(decimalToBinary(55));

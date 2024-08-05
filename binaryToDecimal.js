@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.binaryToDecimal = void 0;
+exports.binaryToDecimal = binaryToDecimal;
 function binaryToDecimal(binaryNumber) {
     var result = 0;
     var binaryNumberString = binaryNumber.toString();
@@ -10,5 +10,4 @@ function binaryToDecimal(binaryNumber) {
     }
     return result;
 }
-exports.binaryToDecimal = binaryToDecimal;
 // console.log(binaryToDecimal(110111));

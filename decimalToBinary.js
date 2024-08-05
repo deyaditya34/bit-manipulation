@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.decimalToBinary = void 0;
+exports.decimalToBinary = decimalToBinary;
 function decimalToBinary(number) {
     var tempResult = "";
     var result = "";
@@ -17,5 +17,4 @@ function decimalToBinary(number) {
     }
     return Number(result);
 }
-exports.decimalToBinary = decimalToBinary;
 // console.log(decimalToBinary(55));
