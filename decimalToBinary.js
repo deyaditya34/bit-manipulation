@@ -18,4 +18,4 @@ function decimalToBinary(number) {
     return Number(result);
 }
 exports.decimalToBinary = decimalToBinary;
-// console.log(decimalToBinary(55));
+console.log(decimalToBinary(1));

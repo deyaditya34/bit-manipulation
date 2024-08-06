@@ -12,3 +12,4 @@ export function binaryToDecimal(binaryNumber: number): number {
 }
 
 // console.log(binaryToDecimal(110111));
+//
